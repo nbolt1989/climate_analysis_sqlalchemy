@@ -40,9 +40,10 @@ def home():
         f"/api/v1.0/stations<br/>"
         f"/api/v1.0/tobs<br>"
         f'<br>'
-        f'<strong>date format yyyy-mm-dd</strong><br>'
+        f'<h4>Want to search by date or time period? Try this: </h4>'
+        f'<strong>search date example: /api/v1.0/searchdate/2011-10-05</strong><br>'
         f"/api/v1.0/searchdate/<start><br/>" 
-        f'<strong>date format yyyy-mm-dd</strong><br>'
+        f'<strong>search date range example: /api/v1.0/daterange/2011-10-05/2012-08-31</strong><br>'
         f"/api/v1.0/daterange/<start>/<end><br/>"
     )
 
@@ -146,6 +147,7 @@ def startend(start, end):
         range_date_dict["Avg Temp"] = d
         range_dates.append(range_date_dict)   
     session.close()
+
     return jsonify(range_dates)
 
 
