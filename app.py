@@ -67,7 +67,7 @@ def precipitation():
         measurement_data.append(measurement_dict)
     return jsonify(measurement_data)
 
-    print("Server received request for 'Precipitation' page...")
+    #print("Server received request for 'Precipitation' page...")
     
 @app.route('/api/v1.0/stations')
 def stations():
